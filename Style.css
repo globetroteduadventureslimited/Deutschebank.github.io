@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #eef2f7;
+  color: #172033;
+}
+
+.app {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  background: #123c72;
+  color: white;
+  padding: 22px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header span {
+  font-size: 12px;
+  opacity: .8;
+}
+
+.demo {
+  background: #f4c430;
+  color: #111;
+  padding: 7px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.card {
+  background: white;
+  padding: 22px;
+  border-radius: 16px;
+  margin-bottom: 18px;
+  box-shadow: 0 5px 20px rgba(0,0,0,.07);
+}
+
+input,
+select {
+  width: 100%;
+  padding: 14px;
+  margin: 8px 0 16px;
+  border: 1px solid #ccd3dd;
+  border-radius: 9px;
+  font-size: 15px;
+}
+
+button {
+  width: 100%;
+  border: 0;
+  padding: 14px;
+  border-radius: 9px;
+  background: #1261a0;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+button:hover {
+  background: #0c4c80;
+}
+
+.balance {
+  background: #123c72;
+  color: white;
+}
+
+.balance h2 {
+  font-size: 32px;
+  margin: 8px 0;
+}
+
+.notice,
+.hint {
+  color: #687386;
+  font-size: 13px;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modalBox {
+  max-width: 430px;
+  width: 100%;
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+}
+
+.feeBox {
+  background: #f0f4f8;
+  padding: 18px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.warning {
+  background: #fff3cd;
+  border: 1px solid #ffe69c;
+  padding: 14px;
+  border-radius: 9px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.cancel {
+  background: #777;
+}
