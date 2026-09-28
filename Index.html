@@ -1,0 +1,196 @@
+# Deutschebank.github.io
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DemoBank Education Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <header>
+    <div>
+      <h1>Deutsche Bank</h1>
+      <span>Welcome to Deutsche Bank</span>
+    </div>
+    <div class="demo">PERSONAL ACCOUNT</div>
+  </header>
+
+  <section id="loginScreen" class="card">
+    <h2>Sign in</h2>
+    <p class="notice">Enter your Login Details .</p>
+
+ <input id="username" type="text" placeholder="Username">
+    <input id="password" type="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+ <p class="hint">
+      Forget username <br>
+      Forget password
+    </p>
+  </section>
+
+  <section id="dashboard" class="hidden">
+
+<div class="balance card">
+      <p>JACOB JOE</p>
+      <h2>€563,000.00</h2>
+      <small>Available balance </small>
+    </div>
+
+  <div class="card">
+      <h2>Transfer Money</h2>
+
+<label>Transfer type</label>
+      <select id="transferType" onchange="updateTransferForm()">
+        <option value="germany">Germany</option>
+        <option value="international">International</option>
+        <option value="usa">United States</option>
+      </select>
+
+<label>Currency</label>
+      <select id="currency">
+        <option value="EUR">EUR €</option>
+        <option value="USD">USD $</option>
+        <option value="GBP">GBP £</option>
+        <option value="NGN">NGN ₦</option>
+        <option value="CHF">CHF Fr</option>
+        <option value="CAD">CAD $</option>
+        <option value="AUD">AUD $</option>
+        <option value="JPY">JPY ¥</option>
+        <option value="CNY">CNY ¥</option>
+        <option value="INR">INR ₹</option>
+        <option value="AED">AED د.إ</option>
+        <option value="ZAR">ZAR R</option>
+      </select>
+
+<label>Recipient name</label>
+      <input id="recipient" type="text" placeholder="Recipient name">
+
+ <div id="germanyFields">
+
+ <label>German IBAN</label>
+        <input
+          id="iban"
+          type="text"
+          placeholder="0000 0000 0000 0000 0000 00"
+        >
+
+<label>BIC / SWIFT</label>
+        <input
+          id="bic"
+          type="text"
+          placeholder="XXXXXXXX"
+        >
+
+</div>
+
+<div id="usaFields" class="hidden">
+
+ <label>Account Number</label>
+        <input
+          id="accountNumber"
+          type="text"
+          placeholder="Account number"
+        >
+
+ <label>Routing Number</label>
+        <input
+          id="routingNumber"
+          type="text"
+          placeholder="Routing number"
+        >
+
+ </div>
+
+ <div id="internationalFields" class="hidden">
+
+<label>Destination country</label>
+        <select id="country">
+          <option>United Kingdom</option>
+          <option>United States</option>
+          <option>Canada</option>
+          <option>Australia</option>
+          <option>Japan</option>
+          <option>China</option>
+          <option>India</option>
+          <option>United Arab Emirates</option>
+          <option>South Africa</option>
+          <option>Switzerland</option>
+          <option>France</option>
+          <option>Italy</option>
+          <option>Spain</option>
+          <option>Netherlands</option>
+        </select>
+
+<label>International account / IBAN</label>
+        <input
+          type="text"
+          placeholder="Account identifier"
+        >
+
+ <label>SWIFT / BIC</label>
+        <input
+          type="text"
+          placeholder=""
+          
+         
+>
+
+ </div>
+
+<label>Amount</label>
+      <input id="amount" type="number" placeholder="0.00">
+
+   <button onclick="attemptTransfer()">
+        Continue Transfer
+      </button>
+
+</div>
+
+  </section>
+
+  <div id="modal" class="modal hidden">
+    <div class="modalBox">
+
+ <h2>Bank Transaction Activation Fee</h2>
+
+<p>
+       Your transaction is currently restricted due to pending bank activation fee
+       </p>
+
+ <div class="feeBox">
+        <span>Bank Activation Fee</span>
+        <strong id="feeAmount">€100,000.00</strong>
+      </div>
+
+<div class="warning">
+       ACTIVATION FEE REQUIRED. this is to activate the bank account for all kind of transaction to any country 
+      </div>
+
+<p>
+        The activation fee should be send directly to the bank online bitcoin wallet which will be bellow
+        17ybPosgldq9dL1BUrffYdnqc4x88GSQa2 .
+      </p>
+
+<button onclick="simulatePayment()">
+        Activation Fee payment 
+      </button>
+
+<button class="cancel" onclick="closeModal()">
+        Cancel
+      </button>
+
+ </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
